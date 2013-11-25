@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 1.8.7"
 
   s.name              = 'gitlab-gollum-lib'
-  s.version           = '1.0.0'
-  s.date              = '2013-04-02'
+  s.version     = `cat VERSION`
+  s.date        = Time.now.strftime("%Y-%m-%d")
   s.rubyforge_project = 'gollum-lib'
 
   s.summary     = "A simple, Git-powered wiki."
@@ -21,10 +21,10 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.extra_rdoc_files = %w[README.md LICENSE]
 
-  s.add_dependency('gitlab-grit', '~> 2.5.1')
+  s.add_dependency('gitlab-grit', '~> 2.6.1')
+  s.add_dependency('gitlab-pygments.rb', '~> 0.5.4')
   s.add_dependency('github-markup', ['>= 0.7.5', '< 1.0.0'])
   s.add_dependency('github-markdown', '~> 0.5.3')
-  s.add_dependency('pygments.rb', '~> 0.4.2')
   s.add_dependency('sanitize', '~> 2.0.3')
   s.add_dependency('nokogiri', '~> 1.5.9')
   s.add_dependency('stringex', '~> 1.5.1')
