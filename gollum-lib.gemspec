@@ -44,7 +44,7 @@ Gem::Specification.new do |s|
   s.files = %w[
     VERSION
     Gemfile
-    HISTORY.md
+    CHANGELOG
     LICENSE
     README.md
     Rakefile
