@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = '0.0.1'
   s.required_ruby_version = ">= 1.8.7"
 
-  s.name              = 'gitlab-gollum-lib'
+  s.name        = 'gitlab-gollum-lib'
   s.version     = `cat VERSION`
   s.date        = Time.now.strftime("%Y-%m-%d")
   s.rubyforge_project = 'gollum-lib'
@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = %w[README.md LICENSE]
 
   s.add_dependency('gitlab-grit', '~> 2.6.1')
-  s.add_dependency('gitlab-pygments.rb', '~> 0.5.4')
   s.add_dependency('github-markup', ['>= 0.7.5', '< 1.0.0'])
   s.add_dependency('github-markdown', '~> 0.5.3')
   s.add_dependency('sanitize', '~> 2.0.3')
@@ -43,6 +42,7 @@ Gem::Specification.new do |s|
 
   # = MANIFEST =
   s.files = %w[
+    VERSION
     Gemfile
     HISTORY.md
     LICENSE

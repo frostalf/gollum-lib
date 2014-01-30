@@ -1,14 +1,10 @@
 # ~*~ encoding: utf-8 ~*~
 require 'digest/sha1'
 require 'cgi'
-require 'pygments'
 require 'base64'
 
 require File.expand_path '../helpers', __FILE__
 require File.expand_path '../remote_code', __FILE__
-
-# initialize Pygments
-Pygments.start
 
 module Gollum
 
@@ -580,13 +576,7 @@ module Gollum
       highlighted = []
       blocks.each do |lang, code|
         encoding ||= 'utf-8'
-        begin
-          # must set startinline to true for php to be highlighted without <?
-          # http://pygments.org/docs/lexers/
-          hl_code = Pygments.highlight(code, :lexer => lang, :options => {:encoding => encoding.to_s, :startinline => true})
-        rescue
-          hl_code = code
-        end
+        hl_code = code
         highlighted << hl_code
       end
 

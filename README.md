@@ -314,53 +314,6 @@ table of contents at the top of all your wiki pages if it is enabled:
 Gollum::Wiki.new("my-gollum-repo.git", {:universal_toc => true})
 ```
 
-## SYNTAX HIGHLIGHTING
-
-In page files you can get automatic syntax highlighting for a wide range of
-languages (courtesy of [Pygments](http://pygments.org/) - must install
-separately) by using the following syntax:
-
-    ```ruby
-      def foo
-        puts 'bar'
-      end
-    ```
-
-The block must start with three backticks, at the beginning of a line or
-indented with any number of spaces or tabs.
-After that comes the name of the language that is contained by the
-block. The language must be one of the `short name` lexer strings supported by
-Pygments. See the [list of lexers](http://pygments.org/docs/lexers/) for valid
-options.
-
-The block contents should be indented at the same level than the opening backticks.
-If the block contents are indented with an additional two spaces or one tab,
-then that whitespace will be ignored (this makes the blocks easier to read in plaintext).
-
-The block must end with three backticks indented at the same level than the opening
-backticks.
-
-### GITHUB SYNTAX HIGHLIGHTING
-
-As an extra feature, you can syntax highlight a file from your repository, allowing
-you keep some of your sample code in the main repository. The code-snippet is
-updated when the wiki is rebuilt. You include github code like this:
-
-    ```html:github:gollum/gollum-lib/master/test/file_view/1_file.txt```
-
-This will make the builder look at the **gollum user**, in the **gollum-lib project**,
-in the **master branch**, at path **test/file_view/1_file.txt**. It will be
-rewritten to:
-
-    ```html
-    <ol class="tree">
-      <li class="file"><a href="0">0</a></li>
-    </ol>
-    ```
-
-Which will be parsed as HTML code during the Pygments run, and thereby coloured
-appropriately.
-
 ## MATHEMATICAL EQUATIONS
 
 Start gollum with the `--mathjax` flag. Read more about [MathJax](http://docs.mathjax.org/en/latest/index.html) on the web. Gollum uses the `TeX-AMS-MML_HTMLorMML` config with the `autoload-all` extension.
