@@ -9,11 +9,6 @@ Gem::Specification.new do |s|
   s.email       = 'dmitriy.zaporozhets@gmail.com'
   s.homepage    = 'https://gitlab.com/gitlab-org/gollum-lib'
 
-  #s.require_paths = %w[lib]
-
-  #s.rdoc_options = ["--charset=UTF-8"]
-  #s.extra_rdoc_files = %w[README.md LICENSE]
-
   s.add_dependency('gitlab-grit', '~> 2.6.1')
   s.add_dependency('github-markup', ['>= 0.7.5', '< 1.0.0'])
   s.add_dependency('github-markdown', '~> 0.5.3')
@@ -21,7 +16,6 @@ Gem::Specification.new do |s|
   s.add_dependency('nokogiri', '~> 1.5.9')
   s.add_dependency('stringex', '~> 1.5.1')
 
-  # = MANIFEST =
   s.files = %w[
     VERSION
     Gemfile
@@ -50,7 +44,6 @@ Gem::Specification.new do |s|
     lib/gollum-lib/wiki.rb
     licenses/licenses.txt
   ]
-  # = MANIFEST =
 
   s.test_files = s.files.select { |path| path =~ /^test\/test_.*\.rb/ }
 end
