@@ -1,25 +1,18 @@
 Gem::Specification.new do |s|
-  s.specification_version = 2 if s.respond_to? :specification_version=
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.rubygems_version = '0.0.1'
-  s.required_ruby_version = ">= 1.8.7"
-
   s.name        = 'gitlab-gollum-lib'
   s.version     = `cat VERSION`
   s.date        = Time.now.strftime("%Y-%m-%d")
-  s.rubyforge_project = 'gollum-lib'
-
+  s.license     = 'MIT'
   s.summary     = "A simple, Git-powered wiki."
   s.description = "A simple, Git-powered wiki with a sweet API and local frontend."
+  s.authors     = ["Tom Preston-Werner", "Rick Olson", "Dmitriy Zaporozhets"]
+  s.email       = 'dmitriy.zaporozhets@gmail.com'
+  s.homepage    = 'https://gitlab.com/gitlab-org/gollum-lib'
 
-  s.authors  = ["Tom Preston-Werner", "Rick Olson"]
-  s.email    = 'tom@github.com'
-  s.homepage = 'http://github.com/gollum/gollum-lib'
+  #s.require_paths = %w[lib]
 
-  s.require_paths = %w[lib]
-
-  s.rdoc_options = ["--charset=UTF-8"]
-  s.extra_rdoc_files = %w[README.md LICENSE]
+  #s.rdoc_options = ["--charset=UTF-8"]
+  #s.extra_rdoc_files = %w[README.md LICENSE]
 
   s.add_dependency('gitlab-grit', '~> 2.6.1')
   s.add_dependency('github-markup', ['>= 0.7.5', '< 1.0.0'])
@@ -27,18 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency('sanitize', '~> 2.0.3')
   s.add_dependency('nokogiri', '~> 1.5.9')
   s.add_dependency('stringex', '~> 1.5.1')
-
-  s.add_development_dependency('RedCloth', '~> 4.2.9')
-  s.add_development_dependency('mocha', '~> 0.13.2')
-  s.add_development_dependency('org-ruby', '~> 0.8.1')
-  s.add_development_dependency('shoulda', '~> 3.4.0')
-  s.add_development_dependency('wikicloth', '~> 0.8.0')
-  s.add_development_dependency('rake', '~> 10.0.3')
-  s.add_development_dependency('pry', '~> 0.9.12')
-  # required by pry
-  s.add_development_dependency('rb-readline', '~> 0.4.2')
-  s.add_development_dependency 'minitest-reporters', '~> 0.14.10'
-  s.add_development_dependency('nokogiri-diff', '~> 0.1.2')
 
   # = MANIFEST =
   s.files = %w[

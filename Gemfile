@@ -1,4 +1,14 @@
 source 'https://rubygems.org'
 
 gemspec
+
 gem 'rake', '~> 10.0.3'
+
+group :development do
+  gem 'pry'
+  gem 'RedCloth', '~> 4.2.9'
+  gem 'mocha', '~> 0.13.2'
+  gem 'org-ruby', '~> 0.8.1'
+  gem 'shoulda', '~> 3.4.0'
+  gem 'wikicloth', '~> 0.8.0'
+end
