@@ -1,9 +1,6 @@
 gollum lib -- A wiki built on top of Git [![build status](https://ci.gitlab.org/projects/7/status.png?ref=master)](https://ci.gitlab.org/projects/7?ref=master)
 ========================================
 
-[![Build Status](https://travis-ci.org/gollum/gollum-lib.png)](https://travis-ci.org/gollum/gollum-lib)
-[![Dependency Status](https://gemnasium.com/gollum/gollum-lib.png)](https://gemnasium.com/gollum/gollum-lib)
-
 ## DESCRIPTION
 
 [Gollum](https://github.com/gollum/gollum) is a simple wiki system built on
