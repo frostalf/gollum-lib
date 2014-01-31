@@ -1,4 +1,4 @@
-gollum lib -- A wiki built on top of Git
+gollum lib -- A wiki built on top of Git [![build status](https://ci.gitlab.org/projects/7/status.png?ref=master)](https://ci.gitlab.org/projects/7?ref=master)
 ========================================
 
 [![Build Status](https://travis-ci.org/gollum/gollum-lib.png)](https://travis-ci.org/gollum/gollum-lib)
@@ -18,10 +18,8 @@ Gollum-lib follows the rules of [Semantic Versioning](http://semver.org/) and us
 
 ## SYSTEM REQUIREMENTS
 
-- Python 2.5+ (2.7.3 recommended)
 - Ruby 1.8.7+ (1.9.3 recommended)
 - Unix like operating system (OS X, Ubuntu, Debian, and more)
-- Will not work on Windows (because of [grit](https://github.com/github/grit))
 
 ## INSTALLATION
 
@@ -484,25 +482,6 @@ wiki.delete_page(page, commit)
 
 Note that filenames on windows must not contain any of the following characters `\ / : * ? " < > |`. See [this support article](http://support.microsoft.com/kb/177506) for details.
 
-## CONTRIBUTE
-
-If you'd like to hack on Gollum-lib, start by forking the repo on GitHub:
-
-http://github.com/gollum/gollum-lib
-
-To get all of the dependencies, install the gem first. The best way to get
-your changes merged back into core is as follows:
-
-1. Clone down your fork
-1. Create a thoughtfully named topic branch to contain your change
-1. Hack away
-1. Add tests and make sure everything still passes by running `rake`
-1. If you are adding new functionality, document it in the README
-1. Do not change the version number, I will do that on my end
-1. If necessary, rebase your commits into logical chunks, without errors
-1. Push the branch up to GitHub
-1. Send a pull request to the gollum/gollum-lib project.
-
 ## RELEASING
 
 Gollum-lib uses [Semantic Versioning](http://semver.org/). Having `x.y.z` :
@@ -519,16 +498,6 @@ For x.y releases:
 ```bash
 $ rake gemspec
 $ rake release
-```
-
-## BUILDING THE GEM FROM MASTER
-
-```bash
-$ gem uninstall -aIx gollum-lib
-$ git clone https://github.com/gollum/gollum-lib.git
-$ cd gollum-lib
-gollum-lib$ rake build
-gollum-lib$ gem install --no-ri --no-rdoc pkg/gollum-lib*.gem
 ```
 
 ## RUN THE TESTS
