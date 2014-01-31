@@ -13,4 +13,5 @@ group :development, :test do
   gem 'wikicloth', '~> 0.8.0'
   gem 'minitest-reporters'
   gem 'nokogiri-diff', '~> 0.1.2'
+  gem "minitest"
 end
