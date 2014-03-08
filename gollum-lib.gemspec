@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://gitlab.com/gitlab-org/gollum-lib'
 
   s.add_dependency('gitlab-grit', '~> 2.6.1')
-  s.add_dependency('github-markup', ['>= 0.7.5', '< 1.0.0'])
+  s.add_dependency('github-markup', ['>= 0.7.5'])
   s.add_dependency('github-markdown', '~> 0.5.3')
   s.add_dependency('sanitize', '~> 2.0.3')
   s.add_dependency('nokogiri', '~> 1.5.9')
